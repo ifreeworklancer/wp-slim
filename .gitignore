@@ -54,6 +54,7 @@ node_modules/
 
 #ignore wp-config
 wp-config.php
+uploads/
 
 package-lock.json
 
@@ -63,3 +64,6 @@ readme.md
 readme.html
 
 license.txt
+
+
+
