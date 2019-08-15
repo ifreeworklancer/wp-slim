@@ -1,0 +1,55 @@
+#app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba($dark, .1);
+  border-bottom: 1px solid rgba(#fff, 0.3);
+  z-index: 200;
+  transition: .5s;
+
+  &.in-scroll {
+    padding: 10px 0;
+    background: rgba($dark, 1);
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 150px;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: block;
+    }
+  }
+
+  .header-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    .contacts-list {
+      margin-right: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-right: 40px;
+      }
+
+      .contacts-item {
+        a {
+          font-size: .75rem;
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-right: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .arrow-item {
+    width: 25px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}

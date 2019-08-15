@@ -1,0 +1,19 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  transition: .5s;
+  z-index: 5;
+  padding: 10px 15px;
+  font-size: $font-size-base;
+  color: #fff;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: 1rem;
+  }
+}

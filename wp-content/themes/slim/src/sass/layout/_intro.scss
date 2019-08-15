@@ -1,0 +1,211 @@
+#intro {
+  height: auto;
+  @extend %img;
+  z-index: 3;
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    height: 100vh;
+  }
+
+  .intro-decor-bg {
+    @extend %pos;
+    left: 20%;
+    background: url('../images/bg/intro-decor-bg.png') 50% 50% /cover no-repeat;
+    z-index: -3;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: url('../images/content/intro/intro-item-bg.png') 50% 50% /cover no-repeat;
+    z-index: -2;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: block;
+    }
+  }
+
+  &::after {
+    content: '';
+    @extend %pos;
+    background: linear-gradient(116.35deg, rgba(#182133, .8) 34.62%, rgba($dark, .8) 92.34%);
+    z-index: -3;
+  }
+
+  .full-name {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    margin-bottom: 0;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    color: $secondary;
+    font-size: $font-size-base;
+    padding-right: 55px;
+    z-index: 4;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      left: 30px;
+      bottom: 45px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      left: 50px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 40px;
+      height: 1px;
+      background: #fff;
+    }
+  }
+
+  .social-list {
+    position: absolute;
+    right: 30px;
+    bottom: 60px;
+    display: none;
+    z-index: 4;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: flex;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      right: 50px;
+    }
+  }
+}
+
+.intro-item {
+  position: relative;
+  padding: 150px 0;
+  color: #fff;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 0;
+  }
+
+  .decor-icon {
+    margin-bottom: 20px;
+
+    svg {
+      fill: $primary;
+    }
+  }
+
+  .title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      font-size: 5rem;
+    }
+  }
+
+  .description {
+    width: 90%;
+    margin-left: auto;
+
+    p {
+      font-size: 1.25rem;
+      line-height: 180%;
+      color: #DCE2ED;
+      margin-bottom: 25px;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: 1.375rem;
+      }
+    }
+  }
+}
+
+.intro-trainer-image {
+  @extend %img;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    display: block;
+    top: 10%;
+    width: 450px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    top: 15%;
+    width: 600px;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  align-items: center;
+  display: none;
+  z-index: 4;
+
+  @media (min-width: 1360px) {
+    display: flex;
+  }
+
+  .icon {
+    position: relative;
+    width: 25px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: linear-gradient(to top, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
+      background-size: 100% 200%;
+      animation: scrollDown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+  }
+
+  .text {
+    font-weight: bold;
+    font-size: .75rem;
+    color: #fff;
+    margin-left: 15px;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    background-position: 0 -10px;
+  }
+
+  75% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 10px;
+  }
+}

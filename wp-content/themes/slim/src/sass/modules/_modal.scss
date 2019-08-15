@@ -1,0 +1,130 @@
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 35px 15px;
+  width: 98%;
+  max-width: 400px;
+  background: $dark;
+  z-index: 120;
+  border-radius: 10px;
+  transition: .5s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -300%);
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 30px 40px;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transform: rotate(-45deg);
+
+    &:hover {
+
+      .line {
+        background: rgba(#fff, 1);
+      }
+    }
+
+    .line-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .line {
+      width: 6px;
+      height: 6px;
+      background: rgba(#fff, .6);
+      transition: .5s;
+    }
+  }
+
+  .custom-modal-header {
+    color: #fff;
+
+    .title {
+      margin-bottom: 15px;
+    }
+    
+    .description {
+      color: #DCE2ED;
+      margin-bottom: 25px;
+    }
+  }
+
+  &--feedback {
+    max-width: 400px;
+    padding: 30px 25px;
+    background: $dark url("../images/modal/modal-bg.png") 50% 50% /cover no-repeat;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      max-width: 845px;
+      padding: 70px 60px;
+    }
+
+    .custom-modal-prev {
+      @extend %pos;
+      z-index: -2;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        display: block;
+      }
+
+      figure {
+        @extend %img;
+        position: absolute;
+        left: 25px;
+        bottom: 0;
+        width: 295px;
+        height: 520px;
+      }
+    }
+
+    .custom-modal-body {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        max-width: 400px;
+        margin-left: auto;
+      }
+
+      .title {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+.modal-mask {
+  @extend %pos;
+  position: fixed;
+  background: rgba($dark, .8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 119;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

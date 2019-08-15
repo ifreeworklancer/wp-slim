@@ -1,0 +1,128 @@
+#about {
+  padding: 50px 0;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 130px 0;
+  }
+
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    @extend %img;
+  }
+
+  .about-item {
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 5;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background: #C4C4C4;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        display: block;
+      }
+    }
+
+    .title,
+    .description{
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 50%;
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        padding-right: 35px;
+      }
+    }
+
+    .description {
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        padding-left: 35px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .decor-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -120px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      left: -50px;
+      right: -50px;
+      bottom: -160px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      left: -80px;
+      right: -80px;
+    }
+
+    svg {
+      width: 100%;
+      fill: $primary;
+    }
+  }
+
+  .about-video {
+    position: relative;
+    z-index: 5;
+    padding-bottom: 56.25%;
+    border-bottom: 10px solid $primary;
+    @extend %img;
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      @include decorCircle(50px, 50px, #fff);
+
+      &:hover {
+
+        &::before {
+          opacity: 0.4;
+        }
+      }
+
+      .triangle {
+        margin-right: -5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8.5px 0 8.5px 17px;
+        border-color: transparent transparent transparent $primary;
+      }
+    }
+  }
+}

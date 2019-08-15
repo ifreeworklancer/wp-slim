@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Play:700&display=swap&subset=cyrillic');
+
+@import "config/variables";
+@import "config/placeholders";
+@import "config/mixin";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+@import "base/page";
+@import "base/single";
+@import "base/articles";
+
+@import "modules/menu";
+@import "modules/forms";
+@import "modules/modal";
+@import "modules/slider";
+@import "modules/video";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/result";
+@import "layout/about";
+@import "layout/trainer";
+@import "layout/advantages";
+@import "layout/packages";
+@import "layout/reviews";
+@import "layout/blog-section";
+@import "layout/footer";
+
+@import "page/page-blog";
+@import "page/page-thanks";
+@import "page/page-error";
+
+@import "single/single-blog";

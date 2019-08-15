@@ -1,0 +1,74 @@
+.burger-menu {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transform: rotate(0);
+  transition: .5s;
+
+  &.active {
+    transform: rotate(-45deg);
+  }
+
+  .line-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .line {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    transition: .5s;
+  }
+
+  &:hover {
+
+    .line {
+      background: $light;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 99;
+  background: $dark;
+
+  .menu-list {
+
+    li {
+      margin-bottom: 25px;
+
+      a {
+        @extend .link-more;
+        text-transform: none;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .social-list {
+    position: absolute;
+    right: 15px;
+    bottom: 40px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      right: 40px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin decorCircle($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background: $background;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: $width + 20px;
+    height: $height + 20px;
+    background: $background;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -2;
+    transition: .5s;
+  }
+}

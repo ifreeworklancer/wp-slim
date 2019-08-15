@@ -1,0 +1,206 @@
+#trainer {
+  padding: 50px 0;
+  z-index: 3;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 50px 0 150px
+  }
+
+  .decor-icon {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: -2;
+
+    svg {
+      fill: #EAEAEA;
+    }
+  }
+
+  .trainer-card {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      flex-direction: row;
+    }
+
+    .content {
+      order: 2;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 60%;
+        order: 1;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 70%;
+      }
+    }
+
+    .prev {
+      padding-top: 20px;
+      order: 1;
+      background: linear-gradient(154.08deg, #2D3C58 4.49%, #0C1220 89.41%);
+      @extend %decorItem;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        width: 40%;
+        order: 2;
+        padding-top: 0;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 30%;
+      }
+
+      .decor-right {
+        &:before,
+        &:after {
+          right: 0;
+          display: none;
+
+          @media (min-width: map_get($grid-breakpoints, md)) {
+            display: block;
+          }
+        }
+      }
+
+
+      .image {
+        width: 300px;
+        height: 520px;
+        @extend %img;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          position: absolute;
+          left: -10px;
+          bottom: 0;
+          width: 100%;
+          max-width: 350px;
+          height: 550px;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          height: 600px;
+          left: -40px;
+        }
+      }
+
+      .full-name {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        margin-bottom: 0;
+        transform: rotate(90deg);
+        transform-origin: 100% 0;
+        color: $secondary;
+        font-size: $font-size-base;
+      }
+    }
+
+    .item {
+      @extend %decorItem;
+      margin-bottom: 3px;
+      padding: 10px 15px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        padding: 30px 40px;
+      }
+
+      .decor-left {
+        &:before,
+        &:after {
+          left: 0;
+          display: none;
+
+          @media (min-width: map_get($grid-breakpoints, md)) {
+            display: block;
+          }
+        }
+      }
+
+      .title {
+        margin-bottom: 0;
+        font-size: 1.7rem;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          font-size: $h2-font-size;
+        }
+      }
+
+      &-footer {
+        padding-top: 15px;
+        border-top: 1px solid #E7E7E7;
+
+        .social-list {
+          a {
+            svg {
+              fill: #C4C4C4;
+            }
+
+            &:hover {
+              svg {
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .advantages-row {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .advantages-item {
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          width: 33.3333%;
+          padding: 0 20px;
+          margin-bottom: 0;
+        }
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &__title {
+          color: $primary;
+        }
+
+        &__description {
+
+          p {
+            color: $light;
+            font-size: .75rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .description {
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        padding-bottom: 30px;
+      }
+
+      p {
+        color: $light;
+        letter-spacing: 0.02em;
+      }
+      ul {
+        @extend %decorList;
+      }
+    }
+  }
+}

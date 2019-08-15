@@ -1,0 +1,52 @@
+.page-section {
+  padding-top: 80px;
+  background: $dark;
+
+  .page-banner {
+    position: relative;
+    @extend %img;
+    overflow: hidden;
+    
+    .section-description {
+      text-align: center;
+      padding: 60px 0;
+      color: #fff;
+    }
+  }
+
+  .page-content {
+    padding: 40px 0 50px;
+  }
+}
+
+.page-secondary {
+  padding: 150px 0;
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: linear-gradient(270deg, rgba(#182133, .9) 32.14%, rgba($dark, 0.3) 101.87%);
+  }
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .page-secondary-item {
+    text-align: center;
+    color: #fff;
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 25px;
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
