@@ -2,10 +2,18 @@
 
   .page-banner {
 
+    .title {
+      font-size: $h2-font-size;
+    }
+
     .back-link {
       position: absolute;
       left: 0;
       bottom: 0;
     }
   }
+
+  //.navigation {
+  //  display: none;
+  //}
 }

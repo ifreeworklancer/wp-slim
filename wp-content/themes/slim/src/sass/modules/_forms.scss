@@ -6,6 +6,7 @@
 
     label {
         position: absolute;
+        width: 100%;
         bottom: 0;
         left: 0;
         font-size: 1rem;
@@ -72,4 +73,16 @@
     &--min {
         max-width: 315px;
     }
+}
+
+
+.wpcf7-not-valid-tip {
+    position: relative;
+    bottom: -20px;
+    color: $secondary !important;
+    font-size: .75rem !important;
+}
+
+.wpcf7-response-output {
+    display: none !important;
 }

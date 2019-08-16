@@ -20,8 +20,8 @@ show_admin_bar(false);
 function theme_scripts()
 {
     wp_deregister_script('wp-embed');
-    wp_deregister_script('jquery');
-    wp_deregister_script('jquery-migrate');
+//    wp_deregister_script('jquery');
+//    wp_deregister_script('jquery-migrate');
 
     wp_enqueue_script('app', get_theme_file_uri('dist/app.js'), null, '', true);
 }
@@ -143,6 +143,38 @@ function theme_customize_register($wp_customize)
         'label' => 'ФИО',
         'type' => 'text',
     ]);
+    $wp_customize->add_section('blog_page', [
+        'title' => 'Страница "Блог"',
+        'priority' => 50,
+    ]);
+    $wp_customize->add_setting('blog_page_title');
+    $wp_customize->add_control('blog_page_title', [
+        'section' => 'blog_page',
+        'label' => 'Заголовок',
+        'type' => 'text',
+    ]);
+    $wp_customize->add_setting('blog_page_description');
+    $wp_customize->add_control('blog_page_description', [
+        'section' => 'blog_page',
+        'label' => 'Краткое описание',
+        'type' => 'textarea',
+    ]);
 }
 
 add_action('customize_register', 'theme_customize_register');
+
+// Add class next and previous post link
+add_filter('next_post_link', 'post_link_attributes_next');
+
+function post_link_attributes_next($output)
+{
+    $code = 'class="page-link-nav page-link-nav--back"';
+    return str_replace('<a href=', '<a ' . $code . ' href=', $output);
+}
+
+add_filter('previous_post_link', 'post_link_attributes_prev');
+function post_link_attributes_prev($output)
+{
+    $code = 'class="page-link-nav page-link-nav--next"';
+    return str_replace('<a href=', '<a ' . $code . ' href=', $output);
+}

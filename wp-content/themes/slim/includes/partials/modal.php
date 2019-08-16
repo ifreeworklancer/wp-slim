@@ -19,31 +19,7 @@ $trainer_card_image = get_field('trainer_card_image', '43');
         <h2 class="title">
             Связаться с нами
         </h2>
-        <form>
-            <div class="form-column">
-                <div class="form-group">
-                    <label for="user-name--feedback" class="label-placeholder">
-                        Введите ваше имя
-                    </label>
-                    <input type="text" id="user-name--feedback" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="user-phone--feedback" class="label-placeholder">
-                        Номер телефона
-                    </label>
-                    <input type="tel" id="user-phone--feedback" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="user-email--feedback" class="label-placeholder">
-                        Email
-                    </label>
-                    <input type="email" id="user-email--feedback" class="form-control">
-                </div>
-                <button class="btn btn-primary">
-                    связаться
-                </button>
-            </div>
-        </form>
+        <?= do_shortcode('[contact-form-7 id="11" title="Форма обратной связи"]')?>
     </div>
 </div>
 
@@ -67,32 +43,7 @@ $trainer_card_image = get_field('trainer_card_image', '43');
         </p>
     </div>
     <div class="custom-modal-body">
-        <form>
-            <div class="form-column">
-                <div class="form-group">
-                    <label for="user-name--firstPackages" class="label-placeholder">
-                        Введите ваше имя
-                    </label>
-                    <input type="text" id="user-name--firstPackages" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="user-phone--firstPackages" class="label-placeholder">
-                        Номер телефона
-                    </label>
-                    <input type="tel" id="user-phone--firstPackages" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="user-email--firstPackages" class="label-placeholder">
-                        Email
-                    </label>
-                    <input type="email" id="user-email--firstPackages" class="form-control">
-                </div>
-                <input type="hidden" id="package-name" name="package_name">
-                <button class="btn btn-primary">
-                    связаться
-                </button>
-            </div>
-        </form>
+        <?= do_shortcode('[contact-form-7 id="135" title="Форма тарифного плана"]')?>
     </div>
 </div>
 

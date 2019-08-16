@@ -47,7 +47,7 @@ $blog_post = new WP_Query($args);
                 <?php wp_reset_query(); ?>
             </div>
             <div class="col-12 text-center mt-4">
-                <a href="#" class="btn btn-outline-primary">
+                <a href="<?= get_category_link(1)?>" class="btn btn-outline-primary">
                     В БЛОГ
                 </a>
             </div>
