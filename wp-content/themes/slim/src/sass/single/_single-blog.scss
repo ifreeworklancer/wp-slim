@@ -66,6 +66,10 @@
       ul {
         @extend %decorList;
       }
+
+      a {
+        color: $primary;
+      }
     }
   }
 }

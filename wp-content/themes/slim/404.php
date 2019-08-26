@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('secondary');
 ?>
     <section id="error-page" class="page-secondary">
         <div class="container h-100">

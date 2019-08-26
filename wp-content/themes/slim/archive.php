@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('secondary');
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'post_type' => 'post',

@@ -1,6 +1,5 @@
 <?php
-get_header();
-
+get_header('secondary');
 ?>
     <!-- Blog single -->
     <section id="blog-single" class="single-section">

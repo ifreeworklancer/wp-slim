@@ -56,27 +56,37 @@
             <ul class="menu-list">
                 <li>
                     <a href="#result" class="scroll-link">
-                        Lorem ipsum.
+                        <?= get_the_title(20)?>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="scroll-link">
-                        Lorem ipsum.
+                    <a href="#about" class="scroll-link">
+                        <?= get_the_title(37)?>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="scroll-link">
-                        Lorem ipsum.
+                    <a href="#trainer" class="scroll-link">
+                        <?= get_the_title(43)?>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="scroll-link">
-                        Lorem ipsum.
+                    <a href="#advantages" class="scroll-link">
+                        <?= get_the_title(57)?>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="scroll-link">
-                        Lorem ipsum.
+                    <a href="#packages" class="scroll-link">
+                        <?= get_the_title(68)?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#reviews" class="scroll-link">
+                        <?= get_the_title(89)?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog-section" class="scroll-link">
+                        <?= get_the_title(115)?>
                     </a>
                 </li>
             </ul>

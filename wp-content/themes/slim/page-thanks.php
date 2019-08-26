@@ -3,7 +3,7 @@
 Template Name: Страница "Спасибо"
 Template Post Type: page
 */
-get_header();
+get_header('secondary');
 ?>
     <section id="thanks-page" class="page-secondary" style="background-image: url(<?= get_the_post_thumbnail_url(); ?>)">
         <div class="container h-100">
