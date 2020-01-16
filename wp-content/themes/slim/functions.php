@@ -102,6 +102,18 @@ function theme_customize_register($wp_customize)
         'label' => 'Instagram',
         'type' => 'text',
     ]);
+    $wp_customize->add_setting('youtube');
+    $wp_customize->add_control('youtube', [
+        'section' => 'contacts',
+        'label' => 'Youtube',
+        'type' => 'text',
+    ]);
+    $wp_customize->add_setting('telegram');
+    $wp_customize->add_control('telegram', [
+        'section' => 'contacts',
+        'label' => 'Telegram',
+        'type' => 'text',
+    ]);
     $wp_customize->add_setting('phone1');
     $wp_customize->add_control('phone1', [
         'section' => 'contacts',

@@ -91,6 +91,20 @@
                                     </svg>
                                 </a>
                             </li>
+                            <li>
+                                <a href="<?= get_theme_mod('youtube'); ?>">
+                                    <svg width="18" height="18">
+                                        <use xlink:href="#youtube-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/<?= get_theme_mod('telegram'); ?>">
+                                    <svg width="15" height="15">
+                                        <use xlink:href="#telegram-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
