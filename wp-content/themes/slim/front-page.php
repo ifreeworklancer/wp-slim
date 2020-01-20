@@ -8,7 +8,7 @@ $sections = [
     'about',
     'trainer',
     'advantages',
-    'packages',
+//    'packages',
     'reviews',
     'blog-section',
 ];
