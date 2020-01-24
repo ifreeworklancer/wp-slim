@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_theme_file_uri('images/favicons/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_theme_file_uri('images/favicons/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_theme_file_uri('images/favicons/favicon-16x16.png') ?>">
+    <link rel="manifest" href="<?php echo get_theme_file_uri('images/favicons/site.webmanifest') ?>">
+    <link rel="mask-icon" href="<?php echo get_theme_file_uri('images/favicons/safari-pinned-tab.svg" color="#5bbad5') ?>">
+    <link rel="shortcut icon" href="<?php echo get_theme_file_uri('images/favicons/favicon.ico') ?>">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="<?php echo get_theme_file_uri('images/favicons/browserconfig.xml') ?>">
+    <meta name="theme-color" content="#ffffff">
+
+    <?php wp_head(); ?>
 </head>
-<?php wp_head(); ?>
 <body>
 
 <?php include(__DIR__ . '/includes/partials/svgs.php') ?>
@@ -26,9 +37,7 @@
                             <svg width="20" height="15">
                                 <use xlink:href="#phone-icon"></use>
                             </svg>
-                            <?php
-                            $phone1 = get_theme_mod('phone1');
-                            ?>
+                            <?php $phone1 = get_theme_mod('phone1'); ?>
                             <a href="tel:<?= phone_link($phone1); ?>">
                                 <?= $phone1; ?>
                             </a>
