@@ -32,7 +32,7 @@ get_header('secondary');
                             <?= the_title(); ?>
                         </h1>
                         <div class="description">
-                            <?= the_content(); ?>
+                            <?php the_content(); ?>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ get_header('secondary');
                     </a>
                 </div>
                 <div class="col-12 col-sm text-center text-sm-right">
-                    <?php previous_post_link('%link', 'следующая стать', true); ?>
+                    <?php previous_post_link('%link', 'следующая статья', true); ?>
                 </div>
             </div>
         </div>
