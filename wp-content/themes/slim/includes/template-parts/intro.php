@@ -42,7 +42,7 @@ $intro_trainer_image = get_field('intro_trainer_image', $pageID);
     </h2>
     <ul class="social-list">
         <li>
-            Мы в социальные медиа
+            Мы в социальных медиа
         </li>
         <li>
             <a href="<?= get_theme_mod('facebook'); ?>">
