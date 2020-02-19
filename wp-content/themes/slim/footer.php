@@ -15,40 +15,6 @@
             <div class="contacts-list">
                 <div class="contacts-item">
                     <svg width="20" height="15">
-                        <use xlink:href="#phone-icon"></use>
-                    </svg>
-                    <?php
-                    $phone1 = get_theme_mod('phone1');
-                    ?>
-                    <a href="tel:<?= phone_link($phone1); ?>">
-                        <?= $phone1; ?>
-                    </a>
-                </div>
-                <div class="contacts-item">
-                    <svg width="20" height="15">
-                        <use xlink:href="#phone-icon"></use>
-                    </svg>
-                    <?php
-                    $phone2 = get_theme_mod('phone2');
-                    ?>
-                    <a href="tel:<?= phone_link($phone2); ?>">
-                        <?= $phone2; ?>
-                    </a>
-                </div>
-                <div class="contacts-item">
-                    <svg width="20" height="15">
-                        <use xlink:href="#place-icon"></use>
-                    </svg>
-                    <?php
-                    $address = get_theme_mod('address');
-                    $address_link = get_theme_mod('address_link');
-                    ?>
-                    <a href="<?= $address_link; ?>" target="_blank">
-                        <?= $address; ?>
-                    </a>
-                </div>
-                <div class="contacts-item">
-                    <svg width="20" height="15">
                         <use xlink:href="#email-icon"></use>
                     </svg>
                     <?php
